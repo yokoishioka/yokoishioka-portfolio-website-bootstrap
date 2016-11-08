@@ -1,0 +1,139 @@
+body {
+   font-family:Raleway, sans-serif;
+   font-size:100%;
+}
+    container.container-fluid {
+        text-align:center;
+    }
+    header {
+        background:#ffffff;
+    }
+    header.row {
+        margin:0;
+        padding-top:2.0em;
+        
+    }
+    header.row .thumbnail{
+        margin:0 auto;
+        border:none;
+        width:60%;
+    }
+    header.row h2 {
+        font-size:1.0em;
+        text-transform:lowercase;
+        color:#ED1E79;
+        letter-spacing:0.1em;
+        margin-top:0;
+        padding-left:0.3em;
+    }
+h3 {
+   text-transform:uppercase;
+   font-size:1.5em;
+   letter-spacing:0.1em;
+}
+a.link {
+   font-size:1.3em;
+   letter-spacing:0.1em;
+}
+a:hover {
+   text-decoration:none;
+   cursor:pointer;
+   color:#999999;
+}
+img {
+   width:100%;
+   border:1px outset #999999;
+   padding:1.0em;
+}
+header nav {
+   text-align:right;
+}
+header nav a {
+   font-size:1.2em;
+   margin-right:6.0em;
+   letter-spacing:0.1em;
+}
+
+section.row {
+    padding:2.0em;
+    margin:2.0em;
+    color:#444;
+}
+#collapsible-panels {
+    margin-top:10.0em;
+}
+section.row:first-child {
+  background:#00A99D;
+}
+section.row:nth-child(2) {
+  background:#22B573;
+}
+section.row:nth-child(3) {
+  background:#F7931E;
+}
+section.row:nth-child(4) {
+  background:#F15A24;
+}
+
+section.row nav.nav {
+   font-size:3.0em;
+   text-transform:lowercase;
+   font-weight:normal;
+   letter-spacing:0.2em;
+   cursor:pointer;
+}
+section.row nav.nav:hover {
+   color:#666666;
+}
+
+article:nth-child(2) {
+  background:#ffffff;
+  margin:2.0em;
+  padding:2.0em;
+}
+.portfolio-details {
+  text-align:left;
+}
+#portfolio-project {
+   padding:2.0em;
+}
+.dl-horizontal dt {
+   text-align:left;
+   width:20%;
+   text-transform:uppercase;
+   letter-spacing:0.2em;
+   margin-right:1.0em;
+}
+.dl-horizontal dd {
+   margin-left:1.0em;
+}
+.glyphicon, .fa {
+   cursor:pointer;
+}
+.glyphicon:hover, .fa:hover {
+   color:#999999;
+}
+.glyphicon-menu-down, .glyphicon-menu-up {
+   font-size:0.5em;
+   top:-0.2em;
+}
+.glyphicon-menu-up {
+   color:#ffffff;
+}
+.glyphicon-remove {
+   position:relative;
+   top:0;
+   float:right;
+   font-size:1.3em;
+   padding-left:1.0em;
+}
+footer a {
+   display:inline-flex;
+   vertical-align:top;
+}
+
+.glyphicon-envelope, .glyphicon-download-alt, .fa-instagram, .fa-linkedin-square {
+   font-size:4.0em;
+   margin:1.0em;
+   color:#666666;
+}
