@@ -32,7 +32,9 @@ h3 {
     text-transform: uppercase;
     font-size: 1.2em;
     letter-spacing: 0.1em;
-    margin-bottom: 2em;
+}
+h3 a.link span{
+    margin-left:1.0em;
 }
 p, li {
     font-size:1.1em;
@@ -74,6 +76,7 @@ section.row {
 #collapsible-panels {
     margin-top:10.0em;
 }
+
 section.row:first-child {
   background:#00A99D;
 }
@@ -99,20 +102,20 @@ section.row nav.nav:hover {
    color:#666666;
 }
 
-article:nth-child(2) {
+article {
   background:#ffffff;
   margin:2.0em;
   padding:2.0em;
 }
-article .collapse .glyphicon-remove {
-    right:1.0em;
+.portfolio-project {
+    padding-left:2.0em;
+    padding-right:2.0em;
 }
-
 .portfolio-details {
   text-align:left;
 }
 #portfolio-project {
-   padding:2.0em;
+   padding:1.0em;
 }
 .carousel-control {
     width:5%;
@@ -166,21 +169,20 @@ article .collapse .glyphicon-remove {
    font-size:0.5em;
    top:-0.2em;
 }
-h3 a.link span{
-    margin-left:1.0em;
-}
+
 .glyphicon-remove {
    position:relative;
    top:0;
    float:right;
    font-size:1.3em;
-   padding-left:1.0em;
 }
+
 .glyphicon-envelope, .glyphicon-download-alt, .fa-instagram, .fa-linkedin-square, .fa-github-square {
    font-size:4.0em;
    margin:1.0em;
    color:#666666;
 }
+
 footer {
    display:flex;
    justify-content: space-around;
