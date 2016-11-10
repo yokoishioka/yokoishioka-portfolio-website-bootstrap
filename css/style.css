@@ -27,9 +27,10 @@ body {
         padding-left:0.3em;
     }
 h3 {
-   text-transform:uppercase;
-   font-size:1.5em;
-   letter-spacing:0.1em;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+    margin-bottom: 2em;
 }
 a.link {
    font-size:1.3em;
@@ -96,6 +97,28 @@ article:nth-child(2) {
 #portfolio-project {
    padding:2.0em;
 }
+.carousel-control {
+    width:5%;
+}
+.carousel-indicators {
+    position:absolute;
+    top:0px;
+}
+.carousel-indicators li {
+    background-color: rgb(153, 153, 153);
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
+.carousel-indicators li.active {
+    background-color: rgb(0, 169, 157);
+}
+.carousel-control.right, .carousel-control.left {
+    color: rgb(0, 169, 157);
+    font-weight: 100;
+    background: none;
+}
 .dl-horizontal dt {
    text-align:left;
    width:20%;
@@ -136,3 +159,4 @@ footer a {
    margin:1.0em;
    color:#666666;
 }
+
