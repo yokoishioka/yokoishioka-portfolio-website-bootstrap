@@ -139,7 +139,7 @@ article:nth-child(2) {
    font-size:0.5em;
    top:-0.2em;
 }
-.glyphicon-menu-up {
+nav.nav .glyphicon-menu-up {
    color:#ffffff;
 }
 .glyphicon-remove {

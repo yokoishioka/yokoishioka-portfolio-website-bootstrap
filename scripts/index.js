@@ -19,7 +19,18 @@ $(document).ready(function() {
       $(this).children('span').slideDown(); 
    });
    $('h3 a.link').each(function() {
-      $(this).append("<span class='glyphicon glyphicon-menu-down'></span>");
+       $(this).append("<span class='glyphicon glyphicon-menu-down'></span>");
+   });
+
+   $('h3 a.link').click(function() {
+       if ($(this).hasClass("glyphicon-menu-down")) {
+           $(this).siblings("span.glyphicon-menu-down").remove();
+           $(this).append("<span class='glyphicon glyphicon-menu-up'></span>");
+       }
+       else if ($(this).hasClass("glyphicon-menu-up")) {
+           $(this).children("span-glyphicon-menu-up").remove();
+            $(this).append("<span class='glyphicon glyphicon-menu-down'></span>");
+       }
    });
    $('a.link').click(function() {
        if ($(this).children('span').hasClass('glyphicon-menu-down')) {
