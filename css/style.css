@@ -104,6 +104,10 @@ article:nth-child(2) {
   margin:2.0em;
   padding:2.0em;
 }
+article .collapse .glyphicon-remove {
+    right:1.0em;
+}
+
 .portfolio-details {
   text-align:left;
 }

@@ -42,9 +42,10 @@ $(document).ready(function() {
            $(this).parent().next('div.collapse.in').slideDown();
        }
    });
-   $('article.collapse').each(function() {
+   $('.row.collapse').each(function() {
       $(this).prepend("<span class='glyphicon glyphicon-remove'></span>");
    });
+
    $('.glyphicon-remove').mouseenter(function() {
       $(this).css("color","#999999");
       $(this).parent().siblings('nav.nav').children('span').slideUp();
