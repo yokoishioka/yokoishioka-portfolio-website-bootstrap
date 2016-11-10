@@ -151,17 +151,20 @@ article:nth-child(2) {
 .glyphicon, .fa {
    cursor:pointer;
 }
+
 .glyphicon p, .fa p {
     font-size:0.3em;
 }
-.glyphicon:hover, .fa:hover {
+.glyphicon:hover, .fa:hover, .glyphicon p:hover, .fa p:hover {
    color:#999999;
 }
 .glyphicon-menu-down, .glyphicon-menu-up {
    font-size:0.5em;
    top:-0.2em;
 }
-
+h3 a.link span{
+    margin-left:1.0em;
+}
 .glyphicon-remove {
    position:relative;
    top:0;
