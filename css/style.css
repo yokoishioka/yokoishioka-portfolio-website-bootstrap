@@ -2,9 +2,7 @@ body {
    font-family:Raleway, sans-serif;
    font-size:100%;
 }
-    container.container-fluid {
-        text-align:center;
-    }
+
     header {
         background:#ffffff;
     }
@@ -25,15 +23,25 @@ body {
         letter-spacing:0.1em;
         margin-top:0;
         padding-left:0.3em;
+        text-align: center;
     }
+    header nav.nav .glyphicon-menu-up {
+        color:#ffffff;
+}
 h3 {
     text-transform: uppercase;
     font-size: 1.2em;
     letter-spacing: 0.1em;
     margin-bottom: 2em;
 }
+p, li {
+    font-size:1.1em;
+    letter-spacing: 0.05em;
+    color:#666666;
+    margin-bottom:1.5em;
+}
 a.link {
-   font-size:1.3em;
+   font-size:1.2em;
    letter-spacing:0.1em;
 }
 a:hover {
@@ -41,6 +49,7 @@ a:hover {
    cursor:pointer;
    color:#999999;
 }
+
 img {
    width:100%;
    padding:1.0em;
@@ -81,6 +90,7 @@ section.row nav.nav {
    font-weight:normal;
    letter-spacing:0.2em;
    cursor:pointer;
+   text-align: center;
 }
 section.row nav.nav:hover {
    color:#666666;
@@ -120,14 +130,20 @@ article:nth-child(2) {
     background: none;
 }
 .dl-horizontal dt {
-   text-align:left;
-   width:20%;
-   text-transform:uppercase;
-   letter-spacing:0.2em;
-   margin-right:1.0em;
+    text-align: left;
+    width: auto;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    margin-right: 1em;
+    color: rgb(68, 68, 68);
+    padding-top: 1em;
+    border-top: 1px solid rgb(153, 153, 153);
 }
 .dl-horizontal dd {
-   margin-left:1.0em;
+    margin-left: 44%;
+    font-size: 1.1em;
+    letter-spacing: 0.05em;
+    padding-top: 1em;
 }
 .glyphicon, .fa {
    cursor:pointer;
@@ -139,9 +155,7 @@ article:nth-child(2) {
    font-size:0.5em;
    top:-0.2em;
 }
-nav.nav .glyphicon-menu-up {
-   color:#ffffff;
-}
+
 .glyphicon-remove {
    position:relative;
    top:0;
@@ -149,14 +163,15 @@ nav.nav .glyphicon-menu-up {
    font-size:1.3em;
    padding-left:1.0em;
 }
-footer a {
-   display:inline-flex;
-   vertical-align:top;
-}
-
 .glyphicon-envelope, .glyphicon-download-alt, .fa-instagram, .fa-linkedin-square, .fa-github-square {
    font-size:4.0em;
    margin:1.0em;
    color:#666666;
 }
+footer a {
+   display:inline-flex;
+   vertical-align:top;
+}
+
+
 
