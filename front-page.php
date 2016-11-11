@@ -116,11 +116,11 @@ function test_input($data) {
 
 <container class="container-fluid">
 <header class="row navbar-fixed-top">
-     <div class="col-md-4 pull-left">
-         <img class="thumbnail header" src="http://yokoishioka.com/wp-content/uploads/2016/11/yoko-ishioka-web-developer-graphic-designer-logo.png" alt="web developer and graphic designer logo - yoko ishioka">
+     <div class="col-lg-4 col-xs-12">
+         <a href="/" title="home"><img class="thumbnail header" src="http://yokoishioka.com/wp-content/uploads/2016/11/yoko-ishioka-web-developer-graphic-designer-logo.png" alt="web developer and graphic designer logo - yoko ishioka"></a>
          <h2>Web Developer | Multimedia Designer</h2>
      </div>
-     <nav class="col-md-8 pull-right">
+     <nav class="col-lg-8 col-xs-12">
          <a href="#portfolio" title="portfolio">projects</a>
          <a href="#blog" title="blog">blog</a>
          <a href="#about" title="about">about</a>
@@ -135,7 +135,7 @@ function test_input($data) {
        <div class="portfolio-project">
          <h3 class="link row remove-toggle-arrow" data-toggle="collapse" data-target="#portfolio-project-html-formatter">HTML Formatter Tool</h3>
         <div id="portfolio-project-html-formatter" class="collapse row">
-             <div class="col-md-8 pull-left thumbnail">
+             <div class="col-lg-8 pull-left thumbnail">
                <figure class="carousel slide carousel-portfolio-html-formatter" data-interval="false">
 
                   <figure class="carousel-inner" role="listbox">
@@ -161,7 +161,7 @@ function test_input($data) {
                   </ol>
              </figure></div>
        
-             <div class="col-md-4 portfolio-details pull-left">
+             <div class="col-lg-4 portfolio-details pull-left">
                <dl class="dl-horizontal">
                  <dt>Client</dt>
                  <dd>Elsevier</dd>
@@ -188,7 +188,7 @@ function test_input($data) {
        <div class="portfolio-project">
         <h3 class="link row remove-toggle-arrow" data-toggle="collapse" data-target="#portfolio-project-spin-the-wheel">Spin the Wheel Game Show Activity</h3>
         <div id="portfolio-project-spin-the-wheel" class="collapse row portfolio-project">
-             <div class="col-md-8 pull-left thumbnail">
+             <div class="col-lg-8 pull-left thumbnail">
                <figure class="carousel slide carousel-portfolio" data-interval="false">
 
                   <figure class="carousel-inner" role="listbox">
@@ -211,7 +211,7 @@ function test_input($data) {
                   </ol>
              </figure></div>
        
-             <div class="col-md-4 portfolio-details pull-left">
+             <div class="col-lg-4 portfolio-details pull-left">
                <dl class="dl-horizontal">
                  <dt>Client</dt>
                  <dd>Elsevier</dd>
@@ -233,7 +233,7 @@ function test_input($data) {
         </div>
         <div class="portfolio-project">
         <h3 class="link row remove-toggle-arrow" data-toggle="collapse" data-target="#portfolio-project-rauwolf-wordpress-ecommerce">Rauwolf WordPress-driven Portfolio and eCommerce Website</h3>
-        <div id="portfolio-project-rauwolf-wordpress-ecommerce" class="collapse row portfolio-project"><div class="col-md-8 pull-left thumbnail"><a class="link" data-toggle="collapse" data-target="#portfolio-project-rauwolf-wordpress-ecommerce">
+        <div id="portfolio-project-rauwolf-wordpress-ecommerce" class="collapse row portfolio-project"><div class="col-lg-8 pull-left thumbnail"><a class="link" data-toggle="collapse" data-target="#portfolio-project-rauwolf-wordpress-ecommerce">
                </a><figure class="carousel slide carousel-portfolio2" data-interval="false"><a class="link" data-toggle="collapse" data-target="#portfolio-project-rauwolf-wordpress-ecommerce">
 
                   <figure class="carousel-inner" role="listbox">
@@ -262,7 +262,7 @@ function test_input($data) {
                   </ol>
              </figure></div>
        
-             <div class="col-md-4 portfolio-details pull-left">
+             <div class="col-lg-4 portfolio-details pull-left">
                <dl class="dl-horizontal">
                  <dt>Client</dt>
                  <dd>Rauwolf</dd>
@@ -302,7 +302,7 @@ function test_input($data) {
      <nav class="nav remove-toggle-arrow" data-toggle="collapse" data-target="#nav-about">About</nav>
 
      <article id="nav-about" class="collapse row">
-         <div class="col-md-8">
+         <div class="col-lg-8">
           <h3 class="text-center border-bottom">10 Things You Should Know About Me</h3>
             <ol>
               <li>I am find stimulation in learning and writing code and start drooling over things like clean design.</li>
@@ -317,7 +317,7 @@ function test_input($data) {
               <li>I will always have a new idea to improve or automate something. I know perfection doesn't exist but I want to get close!</li>
             </ol>
       </div>
-        <div class="col-md-4 text-center">
+        <div class="col-lg-4 text-center">
           <h3 style="border-bottom">Clients</h3>          
               <p>Case-Mate</p>
               <p>Elsevier</p>
@@ -390,9 +390,6 @@ function test_input($data) {
       <a href="https://github.com/yokoishioka" title="Yoko's GitHub'" target="_blank">
         <i class="fa fa-github-square"><p>GitHub</p></i>
         </a>
-      <a href="https://www.instagram.com/cattourist/" title="Yoko's Instagram'" target="_blank">
-          <i class="fa fa-instagram"><p>Instagram</p></i>
-      </a>
       <a href="https://www.linkedin.com/in/yokoishioka" title="Yoko's LinkedIn" target="_blank">
           <i class="fa fa-linkedin-square"><p>LinkedIn</p></i>
       </a>
