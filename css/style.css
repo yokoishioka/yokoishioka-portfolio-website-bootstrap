@@ -32,8 +32,13 @@ h3 {
     text-transform: uppercase;
     font-size: 1.2em;
     letter-spacing: 0.1em;
+    color:#337ab7;
 }
-h3 a.link span{
+h3.remove-toggle-arrow:hover {
+    cursor:pointer;
+    color:#999999;
+}
+h3 span{
     margin-left:1.0em;
 }
 p, li {
