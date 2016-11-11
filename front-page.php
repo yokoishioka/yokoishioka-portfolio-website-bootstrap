@@ -1,0 +1,404 @@
+<?php
+
+$first_nameErr = $last_nameErr = $telephoneErr = $emailErr = $commentsErr = "";
+$first_name = $last_name = $telephone = $comments = "";
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	$message_sent = true;
+  if (empty($_POST["first_name"])) {
+    $first_name = "";
+  } else {
+    $first_name = test_input($_POST["first_name"]);
+	if (!preg_match("/^[a-zA-Z ]*$/",$first_name)) {
+		$message_sent = false;
+    	$first_nameErr = "*Server says: I only like names with letters.";
+		
+	}
+  }
+  
+  
+  if (empty($_POST["last_name"])) {
+    $last_name = "";
+  } else {
+    	$last_name = test_input($_POST["last_name"]);
+	if (!preg_match("/^[a-zA-Z ]*$/",$last_name)) {
+		$message_sent = false;
+    	$last_nameErr = "*Server says: I only like names with letters.";
+	 }
+  }
+  
+  if (empty($_POST["telephone"])) {
+    $telephone = "";
+  } else {
+    $telephone = test_input($_POST["telephone"]);
+	
+  }
+
+  if (empty($_POST["email"])) {
+    $emailErr = "*I can't respond without a valid email address.";
+	$message_sent = false;
+  } else {
+    $email = test_input($_POST["email"]);
+	
+
+  }
+
+  if (empty($_POST["comments"])) {
+    $commentsErr = "*Don't be shy; please include at least one character in your comments.";
+	$message_sent = false;
+  } else {
+	  $comments = $_POST["comments"];
+  }
+	  
+	if ($message_sent == true) {
+		/* added to allow for attachments */
+		$file = $path.$filename;
+		$content = file_get_contents( $file);
+		$content = chunk_split(base64_encode($content));
+		$uid = md5(uniqid(time()));
+		$name = basename($file);
+		$email_to = "yoko@yokoishioka.com";
+		$email_from = $email;
+		$subject = "comments from yokoishioka.com";
+		
+		$headers = "MIME-Version: 1.0" . "\r\n";
+		$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+		$headers .= 'From: '. $email_from ."\r\n";
+	
+			$email_message = "Email from yokoishioka.com <br />";
+			$email_message .= "First Name: " . $first_name . "<br />";
+			$email_message .= "Last Name: " . $last_name . "<br />";
+			$email_message .= "Telephone: ". $telephone. "<br />";
+			$email_message .= "Email: ". $email. "<br />";
+			$email_message .= "Comments: ".$comments. "<br />";	
+			$email_message = wordwrap($email_message,70);
+			mail($email_to, $subject, $email_message, $headers);
+			header('location: //yokoishioka.com/#contact/');
+	
+  }
+		
+	
+}
+function test_input($data) {
+   $data = trim($data);
+   $data = stripslashes($data);
+   $data = htmlspecialchars($data);
+   return $data;
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Web Developer Multimedia Designer | Yoko Ishioka</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="scripts/index.js"></script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87250117-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+
+<container class="container-fluid">
+<header class="row navbar-fixed-top">
+     <div class="col-md-4 pull-left">
+         <img class="thumbnail header" src="http://yokoishioka.com/wp-content/uploads/2016/11/yoko-ishioka-web-developer-graphic-designer-logo.png" alt="web developer and graphic designer logo - yoko ishioka">
+         <h2>Web Developer | Multimedia Designer</h2>
+     </div>
+     <nav class="col-md-8 pull-right">
+         <a href="#portfolio" title="portfolio">projects</a>
+         <a href="#blog" title="blog">blog</a>
+         <a href="#about" title="about">about</a>
+         <a href="#contact" title="contact">contact</a>
+     </nav>
+  </header>
+  <main id="collapsible-panels">
+    <section class="row" id="portfolio">
+     <nav class="nav remove-toggle-arrow" data-toggle="collapse" data-target="#nav-portfolio">Projects</nav>
+ 
+     <article id="nav-portfolio" class="collapse row">
+       <div class="portfolio-project">
+         <h3 class="link row remove-toggle-arrow" data-toggle="collapse" data-target="#portfolio-project-html-formatter">HTML Formatter Tool</h3>
+        <div id="portfolio-project-html-formatter" class="collapse row">
+             <div class="col-md-8 pull-left thumbnail">
+               <figure class="carousel slide carousel-portfolio-html-formatter" data-interval="false">
+
+                  <figure class="carousel-inner" role="listbox">
+                    <div class="item active"><img src="images/elsevier-skills-reference-tool-creator-step1.png" alt="html formatter tool, step 1" />
+                    </div>
+                    <div class="item"><img src="images/elsevier-skills-reference-tool-creator-step2.png" alt="html formatter tool, step 2" />
+                    </div>
+                    <div class="item"><img src="images/elsevier-skills-reference-tool-creator-step3.png" alt="html formatter tool, step 3" />
+                    </div>
+               </figure>
+                 <a class="left carousel-control" href=".carousel-portfolio-html-formatter" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href=".carousel-portfolio-html-formatter" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+                  <ol class="carousel-indicators">
+                  <li data-target=".carousel-portfolio-html-formatter" data-slide-to="0" class="active"></li>
+                  <li data-target=".carousel-portfolio-html-formatter" data-slide-to="1"></li>
+                  <li data-target=".carousel-portfolio-html-formatter" data-slide-to="2"></li>
+                  </ol>
+             </figure></div>
+       
+             <div class="col-md-4 portfolio-details pull-left">
+               <dl class="dl-horizontal">
+                 <dt>Client</dt>
+                 <dd>Elsevier</dd>
+               </dl>
+               <dl class="dl-horizontal">
+                  <dt>Details</dt>
+                  <dd><p>jQuery, JavaScript, HTML5, and CSS</p>
+                      <p>Wrote scripts in jQuery to automatically:</p>
+                      <p>Parse out references and tag them with HTML ordered lists</p>
+                      <p>Generate the necessary script calls and CSS styles</p>
+                      <p>Detects which Levels of Evidence to use: Mosby or AACN</p>
+                      <p>Deletes the Additional Readings section if there are none</p>
+                      <p>Detects if the Classic References blurb is needed and applies the correct one to the Highslide code</p>
+                      <p>Detects and tags hyperlinks and deletes the instructions to do so</p>
+                  </dd>
+                </dl>
+                <dl class="dl-horizontal">
+                  <dt>Web Developer</dt>
+                  <dd>Yoko Ishioka</dd>
+               </dl>   
+             </div>
+        </div>
+        </div>
+       <div class="portfolio-project">
+        <h3 class="link row remove-toggle-arrow" data-toggle="collapse" data-target="#portfolio-project-spin-the-wheel">Spin the Wheel Game Show Activity</h3>
+        <div id="portfolio-project-spin-the-wheel" class="collapse row portfolio-project">
+             <div class="col-md-8 pull-left thumbnail">
+               <figure class="carousel slide carousel-portfolio" data-interval="false">
+
+                  <figure class="carousel-inner" role="listbox">
+                    <div class="item active"><img src="http://yokoishioka.com/images/portfolio/interactive%20media/spin-the-wheel-screen1.png" alt="spin the wheel html5">
+                    </div>
+                    <div class="item"><img src="images/spin-the-wheel-quiz-html5-jquery-dot-net-css.png" alt="quiz questions html5 css jquery">
+                    </div>
+               </figure>
+                 <a class="left carousel-control" href=".carousel-portfolio" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href=".carousel-portfolio" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+                  <ol class="carousel-indicators">
+                  <li data-target=".carousel-portfolio" data-slide-to="0" class="active"></li>
+                  <li data-target=".carousel-portfolio" data-slide-to="1"></li>
+                  </ol>
+             </figure></div>
+       
+             <div class="col-md-4 portfolio-details pull-left">
+               <dl class="dl-horizontal">
+                 <dt>Client</dt>
+                 <dd>Elsevier</dd>
+               </dl>
+               <dl class="dl-horizontal">
+                  <dt>Details</dt>
+                  <dd><p>Built with ASP, jQuery, JavaScript, HTML5, and CSS</p>
+                      <p>Dynamically generated, spinnable animated wheel that splits the circle evenly by the number of elements in an unordered list</p>
+                      <p>Modal box with multiple questions that are either multiple choice or multi-select depending on the class of the element</p>
+                      <p>Instant grading with modal feedback</p>
+                  </dd>
+                </dl>
+                <dl class="dl-horizontal">
+                  <dt>Web Developers</dt>
+                  <dd>Omar Thomas and Yoko Ishioka</dd>
+               </dl>   
+             </div>
+        </div>
+        </div>
+        <div class="portfolio-project">
+        <h3 class="link row remove-toggle-arrow" data-toggle="collapse" data-target="#portfolio-project-rauwolf-wordpress-ecommerce">Rauwolf WordPress-driven Portfolio and eCommerce Website</h3>
+        <div id="portfolio-project-rauwolf-wordpress-ecommerce" class="collapse row portfolio-project"><div class="col-md-8 pull-left thumbnail"><a class="link" data-toggle="collapse" data-target="#portfolio-project-rauwolf-wordpress-ecommerce">
+               </a><figure class="carousel slide carousel-portfolio2" data-interval="false"><a class="link" data-toggle="collapse" data-target="#portfolio-project-rauwolf-wordpress-ecommerce">
+
+                  <figure class="carousel-inner" role="listbox">
+                    <div class="item active"><img src="images/rauwolf-ecommerce-gallery-individual-clutch.png" alt="rauwolf ecommerce wordpress gallery">
+                    </div>
+                    <div class="item"><img src="images/rauwolf-ecommerce-press.png" alt="rauwolf ecommerce wordpress gallery">
+                    </div>
+                    <div class="item"><img src="images/rauwolf-ecommerce-store-wordpress.png" alt="rauwolf ecommerce wordpress gallery">
+                    </div>
+                    <div class="item"><img src="images/rauwolf-ecommerce-store-wordpress-individual-product-page.png" alt="rauwolf ecommerce wordpress gallery">
+                    </div>
+               </figure>
+                 </a><a class="left carousel-control" href=".carousel-portfolio2" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href=".carousel-portfolio2" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+                  <ol class="carousel-indicators">
+                  <li data-target=".carousel-portfolio2" data-slide-to="0" class="active"></li>
+                  <li data-target=".carousel-portfolio2" data-slide-to="1"></li>
+                  <li data-target=".carousel-portfolio2" data-slide-to="2"></li>
+                  <li data-target=".carousel-portfolio2" data-slide-to="3"></li>
+                  </ol>
+             </figure></div>
+       
+             <div class="col-md-4 portfolio-details pull-left">
+               <dl class="dl-horizontal">
+                 <dt>Client</dt>
+                 <dd>Rauwolf</dd>
+               </dl>
+               <dl class="dl-horizontal">
+                  <dt>Details</dt>
+                  <dd><p>Built with WordPress using jQuery, JavaScript, HTML5, and CSS</p>
+                      <p>Created customized WordPress child theme based on Photoshop mockups</p>
+                      <p>Set up, implemented, and modified ecommerce functionality and layout using Jigoshop</p>
+                      <p>Coded HTML email campaigns from scratch</p>
+                      <p>Custom Google Analytics tracking for website and emails</p>
+                      <p>Customized portfolio galleries with selectable captions</p>
+                      <p>Integrated newsletter subscription signups </p>
+                  </dd>
+                </dl>
+                <dl class="dl-horizontal">
+                  <dt>Graphic Designer</dt>
+                  <dd>Denise Medina</dd>
+                </dl>
+                <dl class="dl-horizontal">
+                  <dt>Web Developer</dt>
+                  <dd>Yoko Ishioka</dd>
+               </dl>   
+             </div>
+        </div>
+        </div>
+     </article>
+  </section>
+<section class="row" id="blog">
+     <nav class="nav remove-toggle-arrow" data-toggle="collapse" data-target="#nav-blog">Blog</nav>
+
+     <article id="nav-blog" class="row collapse">
+         <iframe src="http://yokoishioka.com/blog" title="Web Developer and Multimedia Designer Yoko Ishioka blog"></iframe>
+     </article>
+  </section>
+  <section class="row" id="about">
+     <nav class="nav remove-toggle-arrow" data-toggle="collapse" data-target="#nav-about">About</nav>
+
+     <article id="nav-about" class="collapse row">
+         <div class="col-md-8">
+          <h3 class="text-center border-bottom">10 Things You Should Know About Me</h3>
+            <ol>
+              <li>I am find stimulation in learning and writing code and start drooling over things like clean design.</li>
+              <li>I love to learn new languages and tools. I recently learned and implemented Magento 2.0 theme development and recoded this website using the Bootstrap framework. You can view my GitHub repository to see the way I work.</li>
+              <li>My portfolio website has gone through several iterations, trying to reflect the trend of the times. It was first written with ActionScript 3.0, then HTML/PHP, then WordPress, and now Bootstrap. Angular will probably be next on the list.</li> 
+              <li>Personally, I have very little social media presence. (Size does't matter, right?) I started tracking and implementing social media campaigns back when hashtags weren't even a thing yet, so I have always looked at them more as marketing tools.</li>
+              <li>I am much more likely to send you a super cool infographic rather than a viral YouTube video, even if there is a really cute cat. I will also look at you strangely if you make fun of someone for looking frumpy.</li>
+              <li>As a technology person, I realize the end goal of most of my jobs will be to create tools to make my position obsolete. And I wouldn't have it any other way.</li>
+              <li>I will think you have very limited web dev knowledge if you call front-end design easy and believe websites are still built like they were in the '90s.</li>
+              <li>I wholeheartedly advocate for telecommuting. Any time not coding or designing could be better spent towards coding and designing.</li>
+              <li>Before graduating from Georgia Tech with a BS in Computational Media, I received an English degree which emerges with my subconscious urge to start proofreading copy and my compulsion to write clear and exhaustive documentation. Don't believe me? Check out <a href="#blog" title="Web developer and graphic designer blog - Yoko Ishioka">my blog</a>.</li>
+              <li>I will always have a new idea to improve or automate something. I know perfection doesn't exist but I want to get close!</li>
+            </ol>
+      </div>
+        <div class="col-md-4 text-center">
+          <h3 style="border-bottom">Clients</h3>          
+              <p>Case-Mate</p>
+              <p>Elsevier</p>
+              <p>iFusion</p>
+              <p>Joanna Totolici Photography</p>
+              <p>Liz Rundbaken Fashion Styling</p>
+              <p>Michelle Mynx Academy of Pole Dance</p>
+              <p>Preparis</p>
+              <p>Rauwolf</p>
+              <p>Sunberry Images</p>
+              <p>Zobee</p>     
+        </div>
+     </article>
+  </section>
+  <section class="row" id="contact">
+     <nav class="nav remove-toggle-arrow" data-toggle="collapse" data-target="#nav-contact">Contact</nav>
+
+     <article id="nav-contact" class="row collapse">
+      <!--  <form method="post" action="/" role="form">
+  <div class="form-group">
+    <label for="first-name">First name:</label>
+    <input type="text" class="form-control" id="first-name">
+  </div>
+  <div class="form-group">
+    <label for="last-name">Last name:</label>
+    <input type="text" class="form-control" id="last-name">
+  </div>
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" id="email">
+  </div>
+  <div class="form-group">
+    <label for="comments">Comments:</label>
+    <textarea type="text" class="form-control" id="comments"></textarea>
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox"> Remember me</label>
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>-->
+<form id="contactForm" name="contactForm" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+    
+    <p style="float:right; margin-top:-2em; font-size:.66em;"><span class="red">*</span>required</p>
+    <p>I would love to know what you're thinking.</p>
+   
+            <p><label for="first_name">First Name:</label> <input type="text" name="first_name" value="<?php echo $first_name;?>"><span class="error"><?php echo $first_nameErr;?></span></p>
+			
+             <p><label for="last_name">Last Name:</label> <input type="text" name="last_name" value="<?php echo $last_name;?>"><span class="error"><?php echo $last_nameErr;?></span></p>
+        
+         <p><label for="telephone" >Telephone:</label> <input type="text" name="telephone" value="<?php echo $telephone;?>"><span class="error"><?php if (isset($telephoneErr)) echo $telephoneErr;?></span></p>
+         
+         <p><label for="email">Email:<span class="red">*</span></label> <input class="required" type="email" name="email" value="<?php echo $email;?>"><span class="error"><?php echo $emailErr;?></span></p>
+         
+         <p><label for="comments">Comments:<span class="red">*</span></label><br /><textarea class="required" name="comments"><?php echo htmlspecialchars($comments); ?></textarea><span class="error"><?php echo $commentsErr;?></span></p>
+       <button id="buttonEmail" type="submit">Send Email</button> 
+        
+    </form>
+<!--        <iframe src="http://yokoishioka.com/contact" title="Contact Web Developer and Multimedia Designer Yoko Ishioka"></iframe>-->
+
+     </article>
+  </section>
+  </main>
+<footer class="row">
+      <a href="mailto:yoko@yokoishioka.com" title="email Yoko" target="_blank">
+          <span class="glyphicon glyphicon-envelope"><p>email</p></span>
+        </a>
+      <a href="http://yokoishioka.com/wp-content/uploads/2016/11/yoko-ishioka-web-developer-graphic-designer-updated.docx" title="get Yoko's resume" target="_blank">
+          <span class="glyphicon glyphicon-download-alt"><p>resumé</p></span>
+        </a>
+      <a href="https://github.com/yokoishioka" title="Yoko's GitHub'" target="_blank">
+        <i class="fa fa-github-square"><p>GitHub</p></i>
+        </a>
+      <a href="https://www.instagram.com/cattourist/" title="Yoko's Instagram'" target="_blank">
+          <i class="fa fa-instagram"><p>Instagram</p></i>
+      </a>
+      <a href="https://www.linkedin.com/in/yokoishioka" title="Yoko's LinkedIn" target="_blank">
+          <i class="fa fa-linkedin-square"><p>LinkedIn</p></i>
+      </a>
+  </footer>
+</container>
+
+
+</body>
+</html>
