@@ -95,6 +95,7 @@ function test_input($data) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -116,18 +117,18 @@ function test_input($data) {
 
 <container class="container-fluid">
 <header class="row navbar-fixed-top">
-     <div class="col-lg-4 col-xs-12">
+     <div class="col-lg-4 col-xs-12 col-sm-12 col-md-12">
          <a href="/" title="home"><img class="thumbnail header" src="http://yokoishioka.com/wp-content/uploads/2016/11/yoko-ishioka-web-developer-graphic-designer-logo.png" alt="web developer and graphic designer logo - yoko ishioka"></a>
          <h2>Web Developer | Multimedia Designer</h2>
      </div>
-     <nav class="col-lg-8 col-xs-12">
+     <nav class="col-lg-8 col-xs-12 col-sm-12 col-md-12">
          <a href="#portfolio" title="portfolio">projects</a>
          <a href="#blog" title="blog">blog</a>
          <a href="#about" title="about">about</a>
          <a href="#contact" title="contact">contact</a>
      </nav>
   </header>
-  <main id="collapsible-panels">
+  <main id="collapsible-panels" class="row">
     <section class="row" id="portfolio">
      <nav class="nav remove-toggle-arrow" data-toggle="collapse" data-target="#nav-portfolio">Projects</nav>
  
@@ -137,7 +138,7 @@ function test_input($data) {
         <div id="portfolio-project-html-formatter" class="collapse row">
              <div class="col-lg-8 pull-left thumbnail">
                <figure class="carousel slide carousel-portfolio-html-formatter" data-interval="false">
-
+		
                   <figure class="carousel-inner" role="listbox">
                     <div class="item active"><img src="images/elsevier-skills-reference-tool-creator-step1.png" alt="html formatter tool, step 1" />
                     </div>
@@ -159,7 +160,10 @@ function test_input($data) {
                   <li data-target=".carousel-portfolio-html-formatter" data-slide-to="1"></li>
                   <li data-target=".carousel-portfolio-html-formatter" data-slide-to="2"></li>
                   </ol>
-             </figure></div>
+    
+             </figure>
+
+             </div>
        
              <div class="col-lg-4 portfolio-details pull-left">
                <dl class="dl-horizontal">
@@ -360,7 +364,7 @@ function test_input($data) {
 </form>-->
 <form id="contactForm" name="contactForm" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
     
-    <p style="float:right; margin-top:-2em; font-size:.66em;"><span class="red">*</span>required</p>
+    <p style="float:right; margin-top:2.0em; font-size:.86em;"><span class="red">*</span>required</p>
     <p>I would love to know what you're thinking.</p>
    
             <p><label for="first_name">First Name:</label> <input type="text" name="first_name" value="<?php echo $first_name;?>"><span class="error"><?php echo $first_nameErr;?></span></p>
@@ -379,8 +383,9 @@ function test_input($data) {
 
      </article>
   </section>
+
   </main>
-<footer class="row">
+<footer class="row navbar-fixed-bottom">
       <a href="mailto:yoko@yokoishioka.com" title="email Yoko" target="_blank">
           <span class="glyphicon glyphicon-envelope"><p>email</p></span>
         </a>
