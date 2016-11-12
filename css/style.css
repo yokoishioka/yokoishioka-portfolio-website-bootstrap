@@ -112,7 +112,7 @@ section.row {
 #collapsible-panels {
 	margin-top:70px;
 }
-.collapse {
+.collapse.in {
     display: block;
     background: #ffffff;
     padding: 1.0em;
