@@ -133,8 +133,62 @@ function test_input($data) {
      <nav class="nav remove-toggle-arrow" data-toggle="collapse" data-target="#nav-portfolio">Projects</nav>
  
      <article id="nav-portfolio" class="collapse row">
+     <div class="portfolio-project">
+         <h3 class="link row remove-toggle-arrow" data-toggle="collapse" data-target="#portfolio-project-case-mate-search-bar">Case-Mate Enhanced Search Bar</h3>
+        <div id="portfolio-project-case-mate-search-bar" class="collapse row">
+             <div class="col-lg-8 pull-left thumbnail">
+               <figure class="carousel slide carousel-portfolio-search-bar" data-interval="false">
+		
+                  <figure class="carousel-inner" role="listbox">
+                    <div class="item active"><img src="images/case-mate-search-bar-show-results.png" alt="search bar show results" />
+                    </div>
+                    <div class="item"><img src="images/case-mate-search-bar-no-results.png" alt="search bar nothing matches" />
+                    </div>
+                    <div class="item"><img src="images/case-mate-search-bar-empty-search-results.png" alt="search bar empty search results" />
+                    </div>
+               </figure>
+                 <a class="left carousel-control" href=".carousel-portfolio-search-bar" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href=".carousel-portfolio-search-bar" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+                  <ol class="carousel-indicators">
+                  <li data-target=".carousel-portfolio-search-bar" data-slide-to="0" class="active"></li>
+                  <li data-target=".carousel-portfolio-search-bar" data-slide-to="1"></li>
+                  <li data-target=".carousel-portfolio-search-bar" data-slide-to="2"></li>
+                  </ol>
+    
+             </figure>
+
+             </div>
+       
+             <div class="col-lg-4 portfolio-details pull-left">
+               <dl class="dl-horizontal">
+                 <dt>Client</dt>
+                 <dd>Case-Mate</dd>
+               </dl>
+               <dl class="dl-horizontal">
+                  <dt>Details</dt>
+                  <dd><p>jQuery, JavaScript, Liquid, Shopify Plus</p>
+                      <p>Enhanced search bar results which used to show nothing:</p>
+                      <p>Shows results after typing in a few characters and pressing the space bar</p>
+                      <p>Detects if the user hasn't typed in anything and provides recommendations</p>
+                      <p>Detects if the user has mispelled products and offers suggestions</p>
+                      <p>Hides unwanted pages from search engine results</p>
+                  </dd>
+                </dl>
+                <dl class="dl-horizontal">
+                  <dt>Web Developer</dt>
+                  <dd>Yoko Ishioka</dd>
+               </dl>   
+             </div>
+        </div>
+        </div>
        <div class="portfolio-project">
-         <h3 class="link row remove-toggle-arrow" data-toggle="collapse" data-target="#portfolio-project-html-formatter">HTML Formatter Tool</h3>
+         <h3 class="link row remove-toggle-arrow" data-toggle="collapse" data-target="#portfolio-project-html-formatter">Elsevier HTML Formatter Tool</h3>
         <div id="portfolio-project-html-formatter" class="collapse row">
              <div class="col-lg-8 pull-left thumbnail">
                <figure class="carousel slide carousel-portfolio-html-formatter" data-interval="false">
@@ -190,7 +244,7 @@ function test_input($data) {
         </div>
         </div>
        <div class="portfolio-project">
-        <h3 class="link row remove-toggle-arrow" data-toggle="collapse" data-target="#portfolio-project-spin-the-wheel">Spin the Wheel Game Show Activity</h3>
+        <h3 class="link row remove-toggle-arrow" data-toggle="collapse" data-target="#portfolio-project-spin-the-wheel">Elsevier Spin the Wheel Game Show Activity</h3>
         <div id="portfolio-project-spin-the-wheel" class="collapse row portfolio-project">
              <div class="col-lg-8 pull-left thumbnail">
                <figure class="carousel slide carousel-portfolio" data-interval="false">

@@ -182,6 +182,7 @@ article {
 }
 .carousel-indicators li:hover, .carousel-indicators li.active:hover {
 	background-color:#666666;
+	z-index:9999;
 }
 
 .carousel-indicators li.active {
@@ -191,6 +192,7 @@ article {
     color: rgb(0, 169, 157);
     font-weight: 100;
     background: none;
+	z-index:999;
 }
 .dl-horizontal dt {
     text-align: left;

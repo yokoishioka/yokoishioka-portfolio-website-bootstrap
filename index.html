@@ -6,39 +6,104 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="scripts/index.js"></script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-87250117-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 </head>
 <body>
 
 <container class="container-fluid">
 <header class="row navbar-fixed-top">
-     <div class="col-md-4 pull-left">
-         <img class="thumbnail header" src="http://yokoishioka.com/wp-content/uploads/2016/11/yoko-ishioka-web-developer-graphic-designer-logo.png" alt="web developer and graphic designer logo - yoko ishioka">
+     <div class="col-lg-4 col-xs-12 col-sm-12 col-md-12">
+         <a href="/" title="home"><img class="thumbnail header" src="http://yokoishioka.com/wp-content/uploads/2016/11/yoko-ishioka-web-developer-graphic-designer-logo.png" alt="web developer and graphic designer logo - yoko ishioka"></a>
          <h2>Web Developer | Multimedia Designer</h2>
      </div>
-     <nav class="col-md-8 pull-right">
+     <nav class="col-lg-8 col-xs-12 col-sm-12 col-md-12">
          <a href="#portfolio" title="portfolio">projects</a>
          <a href="#blog" title="blog">blog</a>
          <a href="#about" title="about">about</a>
          <a href="#contact" title="contact">contact</a>
      </nav>
   </header>
-  <main id="collapsible-panels">
+  <main id="collapsible-panels" class="row">
     <section class="row" id="portfolio">
      <nav class="nav remove-toggle-arrow" data-toggle="collapse" data-target="#nav-portfolio">Projects</nav>
  
      <article id="nav-portfolio" class="collapse row">
-       <div class="portfolio-project">
-         <h3 class="link row remove-toggle-arrow" data-toggle="collapse" data-target="#portfolio-project-html-formatter">HTML Formatter Tool</h3>
-        <div id="portfolio-project-html-formatter" class="collapse row">
-             <div class="col-md-8 pull-left thumbnail">
-               <figure class="carousel slide carousel-portfolio-html-formatter" data-interval="false">
+         <div class="portfolio-project">
+         <h3 class="link row remove-toggle-arrow" data-toggle="collapse" data-target="#portfolio-project-case-mate-search-bar">Case-Mate Search Bar</h3>
+        <div id="portfolio-project-case-mate-search-bar" class="collapse row">
+             <div class="col-lg-8 pull-left thumbnail">
+               <figure class="carousel slide carousel-portfolio-search-bar" data-interval="false">
+		
+                  <figure class="carousel-inner" role="listbox">
+                    <div class="item active"><img src="images/case-mate-search-bar-show-results.png" alt="search bar show results" />
+                    </div>
+                    <div class="item"><img src="images/case-mate-search-bar-no-results.png" alt="search bar nothing matches" />
+                    </div>
+                    <div class="item"><img src="images/case-mate-search-bar-empty-search-results.png" alt="search bar empty search results" />
+                    </div>
+               </figure>
+                 <a class="left carousel-control" href=".carousel-portfolio-search-bar" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href=".carousel-portfolio-search-bar" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+                  <ol class="carousel-indicators">
+                  <li data-target=".carousel-portfolio-search-bar" data-slide-to="0" class="active"></li>
+                  <li data-target=".carousel-portfolio-search-bar" data-slide-to="1"></li>
+                  <li data-target=".carousel-portfolio-search-bar" data-slide-to="2"></li>
+                  </ol>
+    
+             </figure>
 
+             </div>
+       
+             <div class="col-lg-4 portfolio-details pull-left">
+               <dl class="dl-horizontal">
+                 <dt>Client</dt>
+                 <dd>Case-Mate</dd>
+               </dl>
+               <dl class="dl-horizontal">
+                  <dt>Details</dt>
+                  <dd><p>jQuery, JavaScript, Liquid, Shopify Plus</p>
+                      <p>Enhanced search bar results which used to show nothing:</p>
+                      <p>Shows results after typing in a few characters and pressing the space bar</p>
+                      <p>Detects if the user hasn't typed in anything and provides recommendations</p>
+                      <p>Detects if the user has mispelled products and offers suggestions</p>
+                      <p>Hides unwanted pages from search engine results</p>
+                  </dd>
+                </dl>
+                <dl class="dl-horizontal">
+                  <dt>Web Developer</dt>
+                  <dd>Yoko Ishioka</dd>
+               </dl>   
+             </div>
+        </div>
+        </div>
+       <div class="portfolio-project">
+         <h3 class="link row remove-toggle-arrow" data-toggle="collapse" data-target="#portfolio-project-html-formatter">Elsevier HTML Formatter Tool</h3>
+        <div id="portfolio-project-html-formatter" class="collapse row">
+             <div class="col-lg-8 pull-left thumbnail">
+               <figure class="carousel slide carousel-portfolio-html-formatter" data-interval="false">
+		
                   <figure class="carousel-inner" role="listbox">
                     <div class="item active"><img src="images/elsevier-skills-reference-tool-creator-step1.png" alt="html formatter tool, step 1" />
                     </div>
@@ -60,9 +125,12 @@
                   <li data-target=".carousel-portfolio-html-formatter" data-slide-to="1"></li>
                   <li data-target=".carousel-portfolio-html-formatter" data-slide-to="2"></li>
                   </ol>
-             </figure></div>
+    
+             </figure>
+
+             </div>
        
-             <div class="col-md-4 portfolio-details pull-left">
+             <div class="col-lg-4 portfolio-details pull-left">
                <dl class="dl-horizontal">
                  <dt>Client</dt>
                  <dd>Elsevier</dd>
@@ -87,15 +155,15 @@
         </div>
         </div>
        <div class="portfolio-project">
-        <h3 class="link row remove-toggle-arrow" data-toggle="collapse" data-target="#portfolio-project-spin-the-wheel">Spin the Wheel Game Show Activity</h3>
+        <h3 class="link row remove-toggle-arrow" data-toggle="collapse" data-target="#portfolio-project-spin-the-wheel">Elsevier Spin the Wheel Game Show Activity</h3>
         <div id="portfolio-project-spin-the-wheel" class="collapse row portfolio-project">
-             <div class="col-md-8 pull-left thumbnail">
+             <div class="col-lg-8 pull-left thumbnail">
                <figure class="carousel slide carousel-portfolio" data-interval="false">
 
                   <figure class="carousel-inner" role="listbox">
                     <div class="item active"><img src="http://yokoishioka.com/images/portfolio/interactive%20media/spin-the-wheel-screen1.png" alt="spin the wheel html5">
                     </div>
-                    <div class="item"><img src="/Users/yokoishioka/Creative Cloud Files/sites/yokoishioka-portfolio-website-bootstrap/images/spin-the-wheel-quiz-html5-jquery-dot-net-css.png" alt="quiz questions html5 css jquery">
+                    <div class="item"><img src="images/spin-the-wheel-quiz-html5-jquery-dot-net-css.png" alt="quiz questions html5 css jquery">
                     </div>
                </figure>
                  <a class="left carousel-control" href=".carousel-portfolio" role="button" data-slide="prev">
@@ -112,7 +180,7 @@
                   </ol>
              </figure></div>
        
-             <div class="col-md-4 portfolio-details pull-left">
+             <div class="col-lg-4 portfolio-details pull-left">
                <dl class="dl-horizontal">
                  <dt>Client</dt>
                  <dd>Elsevier</dd>
@@ -134,7 +202,7 @@
         </div>
         <div class="portfolio-project">
         <h3 class="link row remove-toggle-arrow" data-toggle="collapse" data-target="#portfolio-project-rauwolf-wordpress-ecommerce">Rauwolf WordPress-driven Portfolio and eCommerce Website</h3>
-        <div id="portfolio-project-rauwolf-wordpress-ecommerce" class="collapse row portfolio-project"><div class="col-md-8 pull-left thumbnail"><a class="link" data-toggle="collapse" data-target="#portfolio-project-rauwolf-wordpress-ecommerce">
+        <div id="portfolio-project-rauwolf-wordpress-ecommerce" class="collapse row portfolio-project"><div class="col-lg-8 pull-left thumbnail"><a class="link" data-toggle="collapse" data-target="#portfolio-project-rauwolf-wordpress-ecommerce">
                </a><figure class="carousel slide carousel-portfolio2" data-interval="false"><a class="link" data-toggle="collapse" data-target="#portfolio-project-rauwolf-wordpress-ecommerce">
 
                   <figure class="carousel-inner" role="listbox">
@@ -163,7 +231,7 @@
                   </ol>
              </figure></div>
        
-             <div class="col-md-4 portfolio-details pull-left">
+             <div class="col-lg-4 portfolio-details pull-left">
                <dl class="dl-horizontal">
                  <dt>Client</dt>
                  <dd>Rauwolf</dd>
@@ -203,7 +271,7 @@
      <nav class="nav remove-toggle-arrow" data-toggle="collapse" data-target="#nav-about">About</nav>
 
      <article id="nav-about" class="collapse row">
-         <div class="col-md-8">
+         <div class="col-lg-8">
           <h3 class="text-center border-bottom">10 Things You Should Know About Me</h3>
             <ol>
               <li>I am find stimulation in learning and writing code and start drooling over things like clean design.</li>
@@ -218,7 +286,7 @@
               <li>I will always have a new idea to improve or automate something. I know perfection doesn't exist but I want to get close!</li>
             </ol>
       </div>
-        <div class="col-md-4 text-center">
+        <div class="col-lg-4 text-center">
           <h3 style="border-bottom">Clients</h3>          
               <p>Case-Mate</p>
               <p>Elsevier</p>
@@ -237,7 +305,7 @@
      <nav class="nav remove-toggle-arrow" data-toggle="collapse" data-target="#nav-contact">Contact</nav>
 
      <article id="nav-contact" class="row collapse">
-        <form>
+      <!--  <form method="post" action="/" role="form">
   <div class="form-group">
     <label for="first-name">First name:</label>
     <input type="text" class="form-control" id="first-name">
@@ -258,11 +326,31 @@
     <label><input type="checkbox"> Remember me</label>
   </div>
   <button type="submit" class="btn btn-default">Submit</button>
-</form>
+</form>-->
+<form id="contactForm" name="contactForm" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+    
+    <p style="float:right; margin-top:2.0em; font-size:.86em;"><span class="red">*</span>required</p>
+    <p>I would love to know what you're thinking.</p>
+   
+            <p><label for="first_name">First Name:</label> <input type="text" name="first_name" value="<?php echo $first_name;?>"><span class="error"><?php echo $first_nameErr;?></span></p>
+			
+             <p><label for="last_name">Last Name:</label> <input type="text" name="last_name" value="<?php echo $last_name;?>"><span class="error"><?php echo $last_nameErr;?></span></p>
+        
+         <p><label for="telephone" >Telephone:</label> <input type="text" name="telephone" value="<?php echo $telephone;?>"><span class="error"><?php if (isset($telephoneErr)) echo $telephoneErr;?></span></p>
+         
+         <p><label for="email">Email:<span class="red">*</span></label> <input class="required" type="email" name="email" value="<?php echo $email;?>"><span class="error"><?php echo $emailErr;?></span></p>
+         
+         <p><label for="comments">Comments:<span class="red">*</span></label><br /><textarea class="required" name="comments"><?php echo htmlspecialchars($comments); ?></textarea><span class="error"><?php echo $commentsErr;?></span></p>
+       <button id="buttonEmail" type="submit">Send Email</button> 
+        
+    </form>
+<!--        <iframe src="http://yokoishioka.com/contact" title="Contact Web Developer and Multimedia Designer Yoko Ishioka"></iframe>-->
+
      </article>
   </section>
+
   </main>
-<footer class="row">
+<footer class="row navbar-fixed-bottom">
       <a href="mailto:yoko@yokoishioka.com" title="email Yoko" target="_blank">
           <span class="glyphicon glyphicon-envelope"><p>email</p></span>
         </a>
@@ -272,9 +360,6 @@
       <a href="https://github.com/yokoishioka" title="Yoko's GitHub'" target="_blank">
         <i class="fa fa-github-square"><p>GitHub</p></i>
         </a>
-      <a href="https://www.instagram.com/cattourist/" title="Yoko's Instagram'" target="_blank">
-          <i class="fa fa-instagram"><p>Instagram</p></i>
-      </a>
       <a href="https://www.linkedin.com/in/yokoishioka" title="Yoko's LinkedIn" target="_blank">
           <i class="fa fa-linkedin-square"><p>LinkedIn</p></i>
       </a>
