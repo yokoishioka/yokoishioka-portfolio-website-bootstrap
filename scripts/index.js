@@ -14,7 +14,7 @@ $(document).ready(function() {
    });
     $('.glyphicon-remove').click(function() {
         $(this).parent().removeClass('in');
-        $(this).parent().siblings('.remove-toggle-arrow').children('span').removeClass('glyphicon-menu-up').addClass('glyphicon-menu-down');
+        $(this).parent().siblings('.remove-toggle-arrow').find('span').removeClass('glyphicon-menu-up').addClass('glyphicon-menu-down');
    });
    $('.remove-toggle-arrow').mouseenter(function() {
       $(this).children('span').slideUp();
