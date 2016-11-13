@@ -14,7 +14,8 @@ $(document).ready(function() {
    });
     $('.glyphicon-remove').click(function() {
         $(this).parent().removeClass('in');
-        $(this).parent().siblings('.remove-toggle-arrow').find('span').removeClass('glyphicon-menu-up').addClass('glyphicon-menu-down');
+        $(this).parent().siblings().find('span').removeClass('glyphicon-menu-up').addClass('glyphicon-menu-down');
+        resetURLHash();
    });
    $('.remove-toggle-arrow').mouseenter(function() {
       $(this).children('span').slideUp();
@@ -30,15 +31,18 @@ $(document).ready(function() {
            $(this).siblings('collapse').removeClass('in');
        }
    });
-
+   $('.glyphicon-menu-down').click(function() {
+       $(this).removeClass(".glyphicon-menu-down").addClass(".glyphicon-menu-up");
+   });
+    $('.glyphicon-menu-up').click(function() {       
+		$(this).removeClass(".glyphicon-menu-up").addClass(".glyphicon-menu-down");
+		resetURLHash();
+   });
 /* allows the user to zoom in and out */
 
 	$('.portfolio-project > .collapse').each(function() {
 		$(this).prepend("<span class='glyphicon glyphicon-zoom-out'></span> <span class='glyphicon glyphicon-zoom-in'></span>");
 	});
-	
-	
-	
 	
 	$('.glyphicon-zoom-out').click(function() {
 		var thisWidth = $(this).parent().width();
@@ -48,8 +52,7 @@ $(document).ready(function() {
 		}
 		else {
 			$(this).css("opacity", "1.0");
-			$(this).parent().css("width", thisWidth);
-		}
+			$(this).parent().css("width", thisWidth);		}
 	});
 	
 	$('.glyphicon-zoom-in').click(function() {
@@ -59,3 +62,8 @@ $(document).ready(function() {
 	});
   
 });
+
+function resetURLHash() {
+	"use strict";
+	document.location.hash = "";
+}

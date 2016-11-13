@@ -134,8 +134,8 @@ function test_input($data) {
  
      <article id="nav-portfolio" class="collapse row">
      <div class="portfolio-project">
-         <h3 class="link row remove-toggle-arrow" data-toggle="collapse" data-target="#portfolio-project-case-mate-search-bar">Case-Mate Enhanced Search Bar</h3>
-        <div id="portfolio-project-case-mate-search-bar" class="collapse row">
+         <h3 class="link row remove-toggle-arrow" data-toggle="collapse" data-target="#portfolio-project-case-mate-search-bar"><a href="#portfolio-project-case-mate-search-bar" title="Case-Mate Enhanced Search Bar">Case-Mate Enhanced Search Bar</a></h3>
+        <div id="portfolio-project-case-mate-search-bar" class="collapse row portfolio-project">
              <div class="col-lg-8 pull-left thumbnail">
                <figure class="carousel slide carousel-portfolio-search-bar" data-interval="false">
 		
@@ -188,8 +188,8 @@ function test_input($data) {
         </div>
         </div>
        <div class="portfolio-project">
-         <h3 class="link row remove-toggle-arrow" data-toggle="collapse" data-target="#portfolio-project-html-formatter">Elsevier HTML Formatter Tool</h3>
-        <div id="portfolio-project-html-formatter" class="collapse row">
+         <h3 class="link row remove-toggle-arrow" data-toggle="collapse" data-target="#portfolio-project-html-formatter"><a href="#portfolio-project-html-formatter" title="Elsevier HTML Formatter Tool">Elsevier HTML Formatter Tool</a></h3>
+        <div id="portfolio-project-html-formatter" class="collapse row portfolio-project">
              <div class="col-lg-8 pull-left thumbnail">
                <figure class="carousel slide carousel-portfolio-html-formatter" data-interval="false">
 		
@@ -244,7 +244,7 @@ function test_input($data) {
         </div>
         </div>
        <div class="portfolio-project">
-        <h3 class="link row remove-toggle-arrow" data-toggle="collapse" data-target="#portfolio-project-spin-the-wheel">Elsevier Spin the Wheel Game Show Activity</h3>
+        <h3 class="link remove-toggle-arrow" data-toggle="collapse" data-target="#portfolio-project-spin-the-wheel"><a href="#portfolio-project-spin-the-wheel" title="Elsevier Spin the Wheel Game Show Activity">Elsevier Spin the Wheel Game Show Activity</a></h3>
         <div id="portfolio-project-spin-the-wheel" class="collapse row portfolio-project">
              <div class="col-lg-8 pull-left thumbnail">
                <figure class="carousel slide carousel-portfolio" data-interval="false">
@@ -290,7 +290,7 @@ function test_input($data) {
         </div>
         </div>
         <div class="portfolio-project">
-        <h3 class="link row remove-toggle-arrow" data-toggle="collapse" data-target="#portfolio-project-rauwolf-wordpress-ecommerce">Rauwolf WordPress-driven Portfolio and eCommerce Website</h3>
+        <h3 class="link row remove-toggle-arrow" data-toggle="collapse" data-target="#portfolio-project-rauwolf-wordpress-ecommerce"><a href="#portfolio-project-rauwolf-wordpress-ecommerce" title="Rauwolf WordPress-driven Portfolio and eCommerce Website">Rauwolf WordPress-driven Portfolio and eCommerce Website</a></h3>
         <div id="portfolio-project-rauwolf-wordpress-ecommerce" class="collapse row portfolio-project"><div class="col-lg-8 pull-left thumbnail"><a class="link" data-toggle="collapse" data-target="#portfolio-project-rauwolf-wordpress-ecommerce">
                </a><figure class="carousel slide carousel-portfolio2" data-interval="false"><a class="link" data-toggle="collapse" data-target="#portfolio-project-rauwolf-wordpress-ecommerce">
 
@@ -350,7 +350,7 @@ function test_input($data) {
      </article>
   </section>
 <section class="row" id="blog">
-     <nav class="nav remove-toggle-arrow" data-toggle="collapse" data-target="#nav-blog">Blog</nav>
+     <nav class="nav remove-toggle-arrow" data-toggle="collapse" data-target="#nav-blog">Blog</a></nav>
 
      <article id="nav-blog" class="row collapse">
          <iframe src="http://yokoishioka.com/blog" title="Web Developer and Multimedia Designer Yoko Ishioka blog"></iframe>
@@ -433,8 +433,6 @@ function test_input($data) {
        <button id="buttonEmail" type="submit">Send Email</button> 
         
     </form>
-<!--        <iframe src="http://yokoishioka.com/contact" title="Contact Web Developer and Multimedia Designer Yoko Ishioka"></iframe>-->
-
      </article>
   </section>
 
